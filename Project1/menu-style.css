@@ -1,5 +1,10 @@
-.product-types {
-    background-color: rgba(0, 0, 0, 0.188);
+body {
+    margin: 50px 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.categories {
+    /* background-color: rgba(0, 0, 0, 0.188); */
     text-align: center;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -7,18 +12,22 @@
 
 a {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-.product-types a {
+.categories a {
     text-decoration: none;
     font-size: 30px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.product-types a:hover {
+.categories a:hover {
+    font-weight: bold;
+}
+
+.categories .current{
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -29,9 +38,9 @@ ul {
 }
 
 .catalog {
-    padding-top: 100px;
-    margin-left: 400px;
-    margin-right: 400px;
+    /* padding-top: 100px; */
+    /* margin-left: 300px;
+    margin-right: 300px; */
 }
 
 .catalog ul {
@@ -39,19 +48,17 @@ ul {
 
     /* display: -webkit-box;
     display: -ms-flexbox; */
-    /* display: flex; */
+    display: flex;
     flex-direction: unset;
+    gap: 3em;
+    padding-top: 2.5em;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.catalog ul li {
-    margin: 0 1em;
 }
 
 .catalog li {
     padding: 2em 1em;
-    margin: 0 auto .5em auto;
+    margin: auto;
 }
 
 .card {
@@ -62,6 +69,13 @@ ul {
     font-family: arial;
     padding: 10px;
     border-radius: 10px;
+
+}
+
+.card:hover {
+    /* max-width: 305px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .card img {
@@ -94,4 +108,43 @@ ul {
 
 .card button:hover {
     opacity: 0.7;
+}
+
+.sort {
+    display: flex;
+    /* justify-content: space-between; */
+    position: absolute;
+    right: 350px;
+        /* margin-left: 80em; */
+    }
+
+select {
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    height: 2em;
+    font-size: 22px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.filters-sort ul {
+    margin: 50px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.filters-sort li {
+    justify-content: space-between;
+}
+
+.filters-sort h2{
+    margin: 11px;
+}
+
+.filter {
+    display: flex;
 }
