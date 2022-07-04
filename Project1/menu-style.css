@@ -1,34 +1,39 @@
 body {
-    margin: 50px 300px;
+    background: #F2F2F2;
+    margin: 0;
+    width: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: auto;
+    place-content: space-between;
+}
+
+section {
+    padding: 5em 2em;
+    margin-left: 15em;
+    margin-right: 15em;
+    /* background-color: brown; */
+}
+
+
+
+/* ----------Categories---------- */
+
 .categories {
-    /* background-color: rgba(0, 0, 0, 0.188); */
+    background: white;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 a {
     color: black;
-}
-
-
-.categories a {
-    text-decoration: none;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.categories a:hover {
-    font-weight: bold;
-}
-
-.categories .current{
-    text-decoration: underline;
-    font-weight: bold;
 }
 
 ul {
@@ -37,10 +42,56 @@ ul {
     padding: 0;
 }
 
+.categories a {
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: .2em 1em;
+}
+
+.categories .current {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: .2em;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+
+/* ----------Filters & sort options---------- */
+
+.filters h2 {
+    margin: .3em;
+    margin-right: .2em;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    height: 2.5em;
+    padding-right: 2em;
+    /* margin-left: 80em; */
+}
+
+select {
+    display: block;
+    border: .1em solid #000;
+    border-radius: 5px;
+    padding: .2em;
+    /* height: 2em; */
+    font-size: 1.2em;
+}
+
+
+
+/* ----------catalog---------- */
+
 .catalog {
-    /* padding-top: 100px; */
-    /* margin-left: 300px;
-    margin-right: 300px; */
+    padding: 0em 3em;
+    /* background-color: wheat; */
 }
 
 .catalog ul {
@@ -48,103 +99,77 @@ ul {
 
     /* display: -webkit-box;
     display: -ms-flexbox; */
-    display: flex;
+    /* display: flex; */
     flex-direction: unset;
-    gap: 3em;
-    padding-top: 2.5em;
+    gap: 2em;
+    /* padding-top: 2.5em; */
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
 }
 
 .catalog li {
-    padding: 2em 1em;
+    padding: 1em;
     margin: auto;
 }
+
+
+
+/* ----------Card---------- */
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
-    font-family: arial;
     padding: 10px;
     border-radius: 10px;
+    background-color: white;
 
 }
 
 .card:hover {
-    /* max-width: 305px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 .card img {
     border-radius: 7px;
 }
 
-.discription {
-    font-size: 18px;
-    /* margin: 10px; */
+.card img:hover {
+    cursor: pointer;
 }
 
+.card h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+
 .price {
-    color: grey;
+    color: #4d4d4d;
     margin: auto;
-    font-size: 22px;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-top: -.5em;
 }
 
 .card button {
     border: none;
     outline: 0;
-    padding: 12px;
+    padding: .7em;
     color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
-    font-size: 18px;
+    font-size: 1.2em;
     border-radius: 7px;
 }
 
 .card button:hover {
     opacity: 0.7;
-}
-
-.sort {
-    display: flex;
-    /* justify-content: space-between; */
-    position: absolute;
-    right: 350px;
-        /* margin-left: 80em; */
-    }
-
-select {
-    display: block;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px;
-    height: 2em;
-    font-size: 22px;
-}
-
-select:focus {
-    outline: none;
-}
-
-.filters-sort ul {
-    margin: 50px;
-    padding-left: 10px;
-    display: flex;
-}
-
-.filters-sort li {
-    justify-content: space-between;
-}
-
-.filters-sort h2{
-    margin: 11px;
-}
-
-.filter {
-    display: flex;
 }
