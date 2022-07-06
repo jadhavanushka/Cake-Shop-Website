@@ -8,46 +8,68 @@
     <title>About Us</title>
     <style>
         body {
-            background-color: black;
-            border: 1px solid white;
-            width: 80%;
-            margin: 20px 10%;
+            background-color: #0D0D0D;
             font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+                url(aboutcover3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 50em;
         }
 
         h1 {
-            color: #fff;
+            color: #D9CCC5;
             text-align: center;
             font-size: 60px;
             font-weight: bold;
         }
 
-        .cover {
-            width: 80%;
-            position: absolute;
+        nav {
+            /* background-color: black; */
+            /* text-align: right; */
+            font-size: 1.25em;
+            padding: 1.5em;
         }
 
-        .box {
-            background-color: rgba(0, 0, 0, 0.500);
+        nav a {
+            padding: 0 1.5em;
             color: white;
-            width: 470px;
-            max-height: 100vh;
-            margin-left: 70px;
-            margin-top: 200px;
-            padding: 15px;
-            border-radius: 10px;
-            position: relative;
+            text-decoration: none;
+            /* font-size: 12px; */
         }
 
-        .box2 {
-            color: #fff;
-            width: 470px;
-            max-height: 100vh;
-            margin-left: 70px;
-            margin-top: -300px;
-            margin-bottom: 100px;
-            padding: 15px;
-            border-radius: 10px;
+        nav a:hover {
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: flex;
+            /* text-align: right; */
+            list-style-type: none;
+            float: right;
+            margin-right: 11em;
+        }
+
+        section {
+            margin: 20px 10%;
+        }
+
+        /* .cover {
+            width: 100%;
+            position: absolute;
+        } */
+
+        .contents {
+            margin: 0%;
+        }
+
+        .contents img {
+            width: 90%;
             position: relative;
         }
 
@@ -58,91 +80,132 @@
 
         p {
             font-size: 21px;
-            text-align: justify;
+            /* text-align: justify; */
         }
 
-        .baker {
-            width: 700px;
-            margin-left: 850px;
-            position: absolute;
-            margin-top: 200px;
+        .contents .container {
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            text-align: center;
         }
 
-        .cake {
-            width: 700px;
-            position: relative;
-            margin-left: 50px;
-            margin-top: 160px;
+        .contents .container .left-col {
+            padding: .5em;
+            max-width: 50%;
         }
 
-        .cake1 {
-            width: 700px;
-            position: relative;
-            margin-left: 850px;
-            margin-top: 00px;
-            margin-bottom: 100px;
+        .contents .container .right-col {
+            padding: .5em;
+            max-width: 50%;
         }
 
-        .info {
-            color: rgb(255, 233, 233);
-            width: 470px;
-            width: 450px;
-            position: relative;
-            padding: 15px;
+        .box {
+            width: 30em;
+            max-height: fit-content;
+            padding: 1.2em;
             border-radius: 10px;
-            margin-left: 950px;
-            margin-top: -500px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .story {
+            background-color: #0d0d0dc6;
+            color: #D9CCC5;
+            width: 40em;
+            margin: 10% 15em;
+        }
+
+        .container .box {
+            position: relative;
+            color: #D9CCC5;
+            margin: auto 15%;
         }
     </style>
 </head>
 
 <body>
-    <div class="contents">
-        <div class="heading">
-            <h1>About</h1>
-            <br />
-        </div>
 
-        <img src="aboutcover3.jpg" class="cover" />
+    <header>
 
-        <!--White Box-->
-        <div class="box">
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+
+        <h1>About</h1>
+
+        <div class="box story">
             <h2>Story</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum
-                dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum dolor sit
-                amet consectetur adipisicing elit. Culpa adipisci reiciendis assumenda
+                Our cake shop has been in business for over 12 years. Using only natural ingredients, we create the most delicious sweets to please our clients. We are also ready to make your order as soon as possible. You can order a cake or deserts for any holiday or for a gift on our website or just by calling us!
+<br>
+<br>
+We are always glad to receive your orders.
             </p>
         </div>
 
-        <!--Image for Chef-->
-        <div>
-            <img src="baker.jpg" class="baker" />
-        </div>
+    </header>
 
-        <div class="cook">
-            <!--Cake-->
-            <img src="cake6.3.jpg" class="cake" />
-            <div class="info">
-                <h2>Mission</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumenda
-                </p>
+    <!-- <img src="aboutcover3.jpg" class="cover" /> -->
+
+    <section>
+
+        <div class="contents">
+
+
+            <div class="container">
+                <div class="left-col">
+
+                    <img src="cake6.2.jpg" class="cake" />
+
+                    <div class="box">
+                        <h2>Mission</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis
+                            assumendaLorem
+                            ipsum
+                            dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum
+                            dolor
+                            sit
+                            amet consectetur adipisicing elit. Culpa adipisci reiciendis assumenda
+                        </p>
+                    </div>
+                </div>
+
+                <div class="right-col">
+
+                    <img src="baker.jpg" class="baker" />
+
+                    <div class="box">
+                        <h2>Team</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis
+                            assumendaLorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem
+                            ipsum
+                            dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumenda
+                        </p>
+                    </div>
+
+                    <img src="cake5.jpg" class="cake1" />
+
+                </div>
             </div>
-            <img src="cake5.jpg" class="cake1" />
-        </div>
 
-        <div class="box2">
-            <h2>Team</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum
-                dolor sit amet consectetur adipisicing elit. Culpa adipisci reiciendis assumendaLorem ipsum dolor sit
-                amet consectetur adipisicing elit. Culpa adipisci reiciendis assumenda
-            </p>
+
+
+
+
+
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
