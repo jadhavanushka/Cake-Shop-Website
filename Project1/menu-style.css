@@ -1,7 +1,8 @@
 body {
-    background: #F2F2F2;
+    background-color: black;
     margin: 0;
     width: auto;
+    color: #D9CCC5;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,17 +24,53 @@ section {
 
 
 
+
+
+/* -----------NAvbar--------- */
+
+nav {
+    /* background-color: black; */
+    /* text-align: right; */
+    font-size: 1.25em;
+    padding: 1.5em;
+    text-transform: uppercase;
+}
+
+nav a {
+    padding: 0 1.5em;
+    color: #D9CCC5;
+    text-decoration: none;
+    /* font-size: 12px; */
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    /* text-align: right; */
+    list-style-type: none;
+    float: right;
+    margin-right: 11em;
+}
+
+
 /* ----------Categories---------- */
 
 .categories {
-    background: white;
+    /* background: white; */
     text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    justify-content: center;
+    display: flex;
+    padding: 1.5em 0;
+    
 }
 
 a {
-    color: black;
+    text-decoration: none;
+    color: #D9CCC5;
 }
 
 ul {
@@ -44,46 +81,83 @@ ul {
 
 .categories a {
     text-decoration: none;
+    display: block;
     font-size: 1.5em;
     padding: .2em 1em;
+    margin: auto .2em;
+    min-width: 3em;
 }
 
 .categories .current {
     font-weight: bold;
     color: white;
-    background-color: black;
-    border-radius: .2em;
+    border-bottom: .1em solid white;
+
 }
 
 .categories a:hover {
+    color: white;
+}
+
+
+
+/* ----------Path---------- */
+
+.path {
+    color: #8C8485;
+    text-align: center;
+    margin: .75em auto;
+    /* padding: 12em auto; */
+    /* background-color: bisque; */
+}
+
+.path a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: .2em .5em;
+    color: #8C8485;
+}
+
+.path a:hover{
     text-decoration: underline;
 }
 
 
-/* ----------Filters & sort options---------- */
 
-.filters h2 {
-    margin: .3em;
-    margin-right: .2em;
+
+
+/* ----------sort option---------- */
+
+.sort{
+    padding: 1em;
 }
 
-.sort {
+.sort h2 {
+    font-weight: normal;
+    margin: .25em;
+    padding-right: .5em;
+}
+
+.sort-btn {
     display: flex;
-    justify-content: space-between;
-    float: right;
+    justify-content:right;
+    /* float: right; */
     height: 2.5em;
-    padding-right: 2em;
+    padding: 0 4em;
     /* margin-left: 80em; */
 }
 
 select {
     display: block;
-    border: .1em solid #000;
+    color: #D9CCC5;
+    background-color: #0D0D0D;
+    border: .1em solid #D9CCC5;
     border-radius: 5px;
     padding: .2em;
     /* height: 2em; */
     font-size: 1.2em;
 }
+
 
 
 
@@ -121,55 +195,58 @@ select {
 /* ----------Card---------- */
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 20em;
+    height: auto;
     margin: auto;
     text-align: center;
-    padding: 10px;
+    padding: .5em;
+    border: #8C8485 solid .1em;
     border-radius: 10px;
-    background-color: white;
-
-}
-
-.card:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    background-color: #0D0D0D;
+    
 }
 
 .card img {
-    border-radius: 7px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .card img:hover {
     cursor: pointer;
 }
 
-.card h2 {
-    font-size: 2.5em;
+.card .product-name {
+    font-size: 1.6em;
+    height: 1.2em;
     font-weight: bold;
+    margin-bottom: 50% 0;
+    overflow: hidden;
+    /* padding: 1.1em 0; */
 }
 
 
 .price {
-    color: #4d4d4d;
-    margin: auto;
-    font-weight: bold;
-    font-size: 1.4em;
-    margin-top: -.5em;
+    color: #D9CCC5;
+    /* font-weight: bold; */
+    font-size: 1.2em;
+    margin-top: -.7em;
 }
 
 .card button {
     border: none;
+    font-weight: bold;
     outline: 0;
     padding: .7em;
-    color: white;
-    background-color: #000;
+    color: #0D0D0D;
+    background-color: #D9CCC5;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 1.2em;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
 .card button:hover {
-    opacity: 0.7;
+    background-color: white;
+    color: black;
 }
