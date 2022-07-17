@@ -413,7 +413,7 @@ a:hover {
     margin: 0;
     padding:.5em 0;
     color: #8C8485;    
-    background-color: #262626;
+    /* background-color: #262626; */
 }
 
 .footer .social {
