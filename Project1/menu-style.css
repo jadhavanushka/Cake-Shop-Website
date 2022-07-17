@@ -16,9 +16,8 @@ body {
 }
 
 section {
-    padding: 5em 2em;
-    margin-left: 15em;
-    margin-right: 15em;
+    padding: 3em 1em;
+    margin: auto 10em;
     /* background-color: brown; */
 }
 
@@ -29,15 +28,15 @@ section {
 /* -----------NAvbar--------- */
 
 nav {
-    /* background-color: black; */
+    /* background-color: rgb(193, 147, 147); */
     /* text-align: right; */
-    font-size: 1.25em;
-    padding: 1.5em;
+    font-size: 1.2rem;
+    padding: 3em 1em;
     text-transform: uppercase;
 }
 
 nav a {
-    padding: 0 1.5em;
+    padding: 1.1em;
     color: #D9CCC5;
     text-decoration: none;
     /* font-size: 12px; */
@@ -46,6 +45,7 @@ nav a {
 nav a:hover {
     cursor: pointer;
     color: white;
+    text-decoration: none;
 }
 
 .navbar {
@@ -53,7 +53,7 @@ nav a:hover {
     /* text-align: right; */
     list-style-type: none;
     float: right;
-    margin-right: 11em;
+    /* margin-right: 11em; */
 }
 
 
@@ -64,8 +64,8 @@ nav a:hover {
     text-align: center;
     justify-content: center;
     display: flex;
-    padding: 1.5em 0;
-    
+    padding: 1em;
+
 }
 
 a {
@@ -82,7 +82,7 @@ ul {
 .categories a {
     text-decoration: none;
     display: block;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     padding: .2em 1em;
     margin: auto .2em;
     min-width: 3em;
@@ -107,18 +107,18 @@ ul {
     color: #8C8485;
     text-align: center;
     margin: .75em auto;
-    /* padding: 12em auto; */
+    padding: 1.2em 0 0;
     /* background-color: bisque; */
 }
 
 .path a {
     text-decoration: none;
-    font-size: 1.1em;
-    padding: .2em .5em;
+    font-size: 1rem;
+    padding: .5em;
     color: #8C8485;
 }
 
-.path a:hover{
+.path a:hover {
     text-decoration: underline;
 }
 
@@ -128,21 +128,22 @@ ul {
 
 /* ----------sort option---------- */
 
-.sort{
-    padding: 1em;
+.sort {
+    padding: 1em 0;
 }
 
 .sort h2 {
     font-weight: normal;
     margin: .25em;
+    font-size: 1.2rem;
     padding-right: .5em;
 }
 
 .sort-btn {
     display: flex;
-    justify-content:right;
+    justify-content: right;
     /* float: right; */
-    height: 2.5em;
+    height: 2em;
     padding: 0 4em;
     /* margin-left: 80em; */
 }
@@ -155,7 +156,7 @@ select {
     border-radius: 5px;
     padding: .2em;
     /* height: 2em; */
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
 
@@ -164,7 +165,7 @@ select {
 /* ----------catalog---------- */
 
 .catalog {
-    padding: 0em 3em;
+    padding: 1em;
     /* background-color: wheat; */
 }
 
@@ -175,13 +176,13 @@ select {
     display: -ms-flexbox; */
     /* display: flex; */
     flex-direction: unset;
-    gap: 2em;
+    gap: .5em;
     /* padding-top: 2.5em; */
 
     /* grid-template-columns: 1fr 1fr 1fr; */
 
 
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 
 }
 
@@ -195,19 +196,19 @@ select {
 /* ----------Card---------- */
 
 .card {
-    max-width: 20em;
-    height: auto;
+    width: auto;
+    height: fit-content;
     margin: auto;
     text-align: center;
     padding: .5em;
     border: #8C8485 solid .1em;
-    border-radius: 10px;
+    border-radius: .5em;
     background-color: #0D0D0D;
-    
+
 }
 
 .card img {
-    border-radius: 10px;
+    border-radius: .5em;
     object-fit: cover;
 }
 
@@ -216,7 +217,7 @@ select {
 }
 
 .card .product-name {
-    font-size: 1.6em;
+    font-size: 1.2em;
     height: 1.2em;
     font-weight: bold;
     margin-bottom: 50% 0;
@@ -228,92 +229,90 @@ select {
 .price {
     color: #D9CCC5;
     /* font-weight: bold; */
-    font-size: 1.2em;
-    margin-top: -.7em;
+    font-size: 1em;
+    margin-top: -.5em;
+    /* margin-bottom: -.5em; */
+    /* background-color: #8C8485; */
 }
 
 .card button {
+    margin-bottom: -1.2em;
     border: none;
     font-weight: bold;
     outline: 0;
-    padding: .7em;
-    color: #0D0D0D;
-    background-color: #D9CCC5;
+    padding: .5em;
+    background-color: #ffefe7;
+    color: black;
     text-align: center;
     cursor: pointer;
     width: 100%;
-    font-size: 1.2em;
-    border-radius: 10px;
+    font-size: 1em;
+    border-radius: .2em;
+    ;
 }
 
 .card button:hover {
-    background-color: white;
-    color: black;
+    color: #0D0D0D;
+    background-color: #D9CCC5;
 }
 
 
-      
-.footer{
-    padding: 40px 0;
-    color: hsl(208, 29%, 91%);
-    background-color: #24262b;
-  }
-  
-  .footer .social{
+
+/* ------------Footer----------- */
+
+.footer {
+    margin: 0;
+    padding: .5em 0;
+    color: #8C8485;
+    background-color: #262626;
+}
+
+.footer .social {
     text-align: center;
-    padding-bottom: 3px;
-    color: #dee3e9;
-  }
-  
-  .footer .social a{
-    font-size: 24px;
+    padding-bottom: 1em;
+}
+
+.footer .social a {
+    font-size: 1.2rem;
     color: inherit;
-    border: 1px solid rgb(230, 219, 219);
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
+    border: .1em solid #8C8485;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    margin: 6px 8px;
-    opacity: 0.75;
-  }
-  
-  .footer .social a:hover{
-    opacity: 0.9;
-  }
-  
-  .footer ul{
-    margin-top: 0;
-    padding: 0;
+    margin: .5em;
+}
+
+.footer .social a:hover {
+    color: #D9CCC5;
+    border-color: #D9CCC5;
+}
+
+.footer ul {
     list-style: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+    font-size: 1.2rem;
     text-align: center;
-  
-  }
-  
-  .footer ul a{
+
+}
+
+.footer ul a {
     color: inherit;
     text-decoration: none;
-    opacity: 0.8;
-  
-  }
-  
-  .footer ul li{
+}
+
+.footer ul li {
     display: inline-block;
-    padding: 0 15px;
-  
-  }
-  
-  .footer ul li a:hover{
-    opacity: 1;
-  }
-  
-  .footer .copyright{
-    margin-top: 15px;
+    padding: 0 1em;
+
+}
+
+.footer ul li a:hover {
+    color: #D9CCC5;
+}
+
+.footer .copyright {
     text-align: center;
-    font-size: 13px;
-    color: rgb(248, 233, 233);
-  }
+    font-size: 1em;
+}
