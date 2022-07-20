@@ -15,13 +15,20 @@ nav {
     /* background-color: rgb(193, 147, 147); */
     /* text-align: right; */
     font-size: 1.2rem;
-    padding: 3em 1em;
+    padding: 1em;
+    height: 3em;
     text-transform: uppercase;
+}
+
+nav .logo{
+    height: 3em;
+    padding: 0;
+    /* margin-top: -1em; */
 }
 
 nav a {
     padding: 1.1em;
-    color: #D9CCC5;
+    color: #ffefe7;
     text-decoration: none;
     /* font-size: 12px; */
 }
@@ -37,6 +44,7 @@ nav a:hover {
     /* text-align: right; */
     list-style-type: none;
     float: right;
+    padding-top: 1em;
     /* margin-right: 11em; */
 }
 
@@ -81,6 +89,7 @@ ul {
 
 .categories a:hover {
     color: white;
+    text-decoration: none;
 }
 
 
@@ -128,8 +137,10 @@ section {
 
 /* ----------image---------- */
 .product-img {
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
+    background-color: #40383A;
+    margin: 1em auto auto 5em;
     border-radius: .5em;
 }
 
@@ -151,7 +162,7 @@ section {
     /* margin: 3em; */
     /* padding: .5em; */
     /* background-color: #8C8485; */
-    max-width: 40%;
+    width: 40%;
 }
 
 .product .container .right-col h1 {
@@ -208,7 +219,7 @@ button:hover {
 
 select {
     display: flex;
-    color: #D9CCC5;
+    color: #ffefe7;
     background-color: #40383A;
     border: none;
     border-radius: .3em;
@@ -219,15 +230,16 @@ select {
 
 .product button {
     margin: auto 1em auto 0;
-    max-width: 30%;
-    height: 2.5em;
+    width: 10em;
+    height: 2em;
     padding: .2em;
 }
 
 .atc-btns {
     display: flex;
-    margin: 1em auto;
-    justify-content: left;
+    padding: 0 2em;
+    /* margin: 1em auto; */
+    /* justify-content: left; */
 
     /* background-color: #4d4d4d; */
 }
@@ -237,7 +249,7 @@ select {
 
 
 
-/* ------------Discription------------ */
+/* ------------Description------------ */
 .details-btns {
     display: flex;
     margin: 3em auto .2em;
@@ -272,12 +284,22 @@ select {
     display: inline-flex;
     font-size: 1.2rem;
     text-align: left;
-    margin: 1.2em auto;
+    margin: 1em auto;
     max-width: 90%;
+    /* background-color: #40383A; */
+    color: #D9CCC5;
     /* padding: 2em; */
 }
 
+#des{
+    padding: 0;
+    margin-top: 0;
+}
 
+#hls{
+    list-style-type:disc ;
+    list-style-position: inside;
+}
 
 
 
@@ -402,7 +424,9 @@ a:hover {
     background-color: #D9CCC5;  
 }
 
-
+.card a:hover{
+    text-decoration: none;
+}
 
 
 
