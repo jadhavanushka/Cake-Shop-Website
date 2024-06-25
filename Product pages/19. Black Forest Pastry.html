@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazelnut Chocolate Cake</title>
+    <title>Black Forest Pastry</title>
     <link rel="stylesheet" type="text/css" href="product-style.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -14,32 +15,31 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img class="logo" src="Images/logo.png"
-></a>
+            <a href="../index.html"><img class="logo" src="../Images/logo.png"></a>
             <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                      <li><a href="menu.html">Menu</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../menu.html">Menu</a></li>
+                <li><a href="../aboutus.html">About</a></li>
             </ul>
         </nav>
 
 
 
         <div class="container">
-            <div class="categories">
+            <!-- <div class="categories">
                 <a href="menu.html">All</a>
-                <a href="#" class="current">Cakes</a>
+                <a href="menu copy.html">Cakes</a>
                 <a href="#">Pastries</a>
                 <a href="menu copy 2.html">Cupcakes</a>
-                <a href="menu copy 3.html">Donuts</a>
-            </div>
+                <a href="#" class="current">Donuts</a>
+            </div> -->
 
         </div>
         <div class="path">
-            <a href="index.html">Home</a>&gt;
-            <a href="menu.html">Menu</a>&gt;
-            <!-- <a href="menu copy.html">Cakes</a>&gt; -->
-            <a href="#">Hazelnut Chocolate Cake</a>
+            <a href="../index.html">Home</a>&gt;
+            <a href="../menu.html">Menu</a>&gt;
+            <!-- <a href="menu copy 3.html">Donuts</a>&gt; -->
+            <a href="#">Black Forest Pastry</a>
         </div>
 
 
@@ -48,19 +48,19 @@
 
     <section class="product">
         <div class="container">
-            <img src="Images/2. Hazelnut chocolate.png" class="product-img" alt="Illustration">
+            <img src="../Images/19. Black Forest Pastry.jpg" class="product-img" alt="Illustration">
             <div class="right-col">
-                <h1>Hazelnut Chocolate Cake</h1>
+                <h1>Black Forest Pastry</h1>
                 <p class="price">Rs.
-                    <span class="pr">799</span>
+                    <span class="pr">599</span>
                 </p>
 
                 <div class="weight">
                     <!-- <h2>Weight:</h2> -->
                     <select id="weight" onclick="getOption()">
-                        <option value="half">0.5 Kg</option>
-                        <option value="one">1 Kg</option>
-                        <option value="two">2 Kg</option>
+                        <option value="half">Set of 4</option>
+                        <option value="one">Set of 8</option>
+                        <option value="two">Set of 12</option>
                     </select>
                     <div class="atc-btns">
                         <!-- <button>Add to Cart</button> -->
@@ -74,13 +74,13 @@
                         selectElement = document.querySelector('#weight');
                         switch (selectElement.options[selectElement.selectedIndex].value) {
                             case "one":
-                                document.querySelector('.pr').textContent = 1499;
+                                document.querySelector('.pr').textContent = 1199;
                                 break;
                             case "two":
-                                document.querySelector('.pr').textContent = 3949;
+                                document.querySelector('.pr').textContent = 1799;
                                 break;
                             case "half":
-                                document.querySelector('.pr').textContent = 799;
+                                document.querySelector('.pr').textContent = 599;
                         }
                     }
 
@@ -93,19 +93,19 @@
                 <div id="details-btns" class="details-btns">
 
                     <button onclick="product_des()" class="button current-btn">Description</button>
-                    <button onclick="product_hls()" class="button">Highlights</button>
+                    <!-- <button onclick="product_hls()" class="button">Highlights</button> -->
                 </div>
 
                 <div id="details" class="details">
                     <ul id="hls" style="display:none;">
-                        <li>Cake Flavour: Hazelnut Chocolate Cake&nbsp;</li>
-                        <li>Type of Cake: Cream</li>
-                        <li>Weight: Half Kg</li>
+                        <li>Flavor: Chocolate & Caramel</li>
+                        <li>Type of Dessert: Cupcake</li>
                         <li>Shape: Round</li>
-                        <li>Serves: 4-6 People</li>
+                        <li>Quantity: 4</li>
                     </ul>
 
-                    <p id="des">An irresistible blend of cappuccino and chocolate cake filled with buttercream icing along with hazelnuts is the most scrumptious combination. </p>
+                    <p id="des">Find yourself living, breathing and dreaming of chocolate? Us too. Luckily we have the
+                        cure. Filled with dark chocolate ganache and dipped in dark chocolate.</p>
                 </div>
 
 
@@ -157,51 +157,48 @@
                     <ul>
                         <li>
                             <div class="card">
-
-                                <img src="Images/1. Chocolate truffle.jpg" style="width:100%">
-                                <p class="product-name"><a href="1.Choco truffle.html">Chocolate Truffle Cake</a></p>
-                                <p class="price">Rs. 549</p>
-                                <p><button>Order Now</button></p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card">
-        
-                                <a href="3.Soft vanilla.html"><img src="Images/3.Soft vanilla.jpg" style="width:100%"></a>
-                                <p class="product-name"><a href="3.Soft vanilla.html">Soft Vanilla</a></p>
+                                <a href="18. Blueberry Pastry.html"><img
+                                        src="../Images/18. Blueberry pastry.jpg" style="width:100%"></a>
+                                <p class="product-name"><a href="18. Blueberry Pastry.html">Blueberry Pastry</a></p>
                                 <p class="price">Rs. 599</p>
                                 <p><button>Order Now</button></p>
                             </div>
                         </li>
-        
+
                         <li>
                             <div class="card">
-                                <a href="4.Butterscotch.html"><img src="Images/4. Butterscotch.jpg" style="width:100%"></a>
-                                <p class="product-name"><a href="4.Butterscotch.html">Butterscotch Cake</a></p>
+                                <a href="13. Rainbow Donut.html"><img src="../Images/13. Rainbow donut.jpg"
+                                        style="width:100%"></a>
+                                <p class="product-name"><a href="13. Rainbow Donut.html">Rainbow Donut</a></p>
                                 <p class="price">Rs. 599</p>
                                 <p><button>Order Now</button></p>
                             </div>
                         </li>
-        
-    
+
                         <li>
                             <div class="card">
-        
-                                <a href="5.Black forest.html"><img src="Images/5. Black forest.jpg" style="width:100%"></a>
-                                <p class="product-name"><a href="5.Black forest.html">Black Forest Cake</a></p>
-                                <p class="price">Rs. 549</p>
+                                <a href="14. Redvelvet donut.html"><img src="../Images/14. Redvelvet donut.jpg"
+                                        style="width:100%"></a>
+                                <p class="product-name"><a href="14. Redvelvet donut.html">Redvelvet Donut</a></p>
+                                <p class="price">Rs. 599</p>
                                 <p><button>Order Now</button></p>
                             </div>
                         </li>
 
-
-
+                        <li>
+                            <div class="card">
+                                <a href="15. Chocolate donut.html"><img
+                                        src="../Images/15. Chocolate donut.jpg" style="width:100%"></a>
+                                <p class="product-name"><a href="15. Chocolate donut.html">Chocolate
+                                        Donut</a></p>
+                                <p class="price">Rs. 599</p>
+                                <p><button>Order Now</button></p>
+                            </div>
+                        </li>
                     </ul>
-
                 </div>
             </div>
-            <a href="menu.html">
+            <a href="../menu.html">
                 <p>See more</p>
             </a>
         </div>
@@ -209,6 +206,7 @@
 
 
     </section>
+
 
 
 
@@ -220,9 +218,9 @@
         </div>
 
         <ul class="list">
-            <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-            <li><a href="aboutus.html">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../menu.html">Menu</a></li>
+            <li><a href="../aboutus.html">About</a></li>
         </ul>
         <p class="copyright">
             Cakelicious @2022.
