@@ -7,124 +7,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cakelicious</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/js" href="main.js" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
 
   <header>
     <nav>
-      <div class="row clearfix">
-        <img class="logo" src="Images/logo.png">
+      <img class="logo" src="Images/logo.png">
 
-        <ul class="main-nav animated slideInDown" id="check-class">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="aboutus.html">About</a></li>
-        </ul>
-
-      </div>
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="aboutus.html">About</a></li>
+      </ul>
     </nav>
-
-    <div class="main-content-header">
-      <h1>Cakelicious</h1>
-      <h2>Indulge your taste buds in savoury and delicious treats.
-      </h2>
-    </div>
   </header>
 
-
-  <section class="footer">
-    <div class="social">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <section class="main-content">
+    <div class="main-content-header">
+      <h1>Indulge yourself in savory and delicious treats</h1>
+      <p>Welcome to Cakelicious, your go-to destination for the most delicious cakes, pastries, cupcakes, and donuts.
+        Our treats are baked fresh daily with the finest ingredients to ensure you get the best taste and quality.</p>
     </div>
-
-    <ul class="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Gallery.html">Gallery</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="aboutus.html">About</a></li>
-    </ul>
-    <p class="copyright">
-      Cakelicious @2022.
-    </p>
   </section>
 
-  <style>
-    .footer {
-      padding: 40px 0;
-      color: #8C8485;
-      background-color: #262626;
+  <section class="products-section">
+    <h2>Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="Images/cakes.jpg">
+        <div class="product-details">
+          <h3>Cakes</h3>
+          <p>7 products</p>
+        </div>
+      </div>
 
-    }
+      <div class="product-card">
+        <img src="Images/cupcakes.jpg">
+        <div class="product-details">
+          <h3>Cupcakes</h3>
+          <p>5 products</p>
+        </div>
+      </div>
 
-    .footer .social {
-      text-align: center;
-      padding-bottom: 3px;
-      color: #8C8485;
-    }
+      <div class="product-card">
+        <img src="Images/pastries.jpg">
+        <div class="product-details">
+          <h3>Pastries</h3>
+          <p>4 products</p>
+        </div>
+      </div>
 
-    .footer .social a {
-      font-size: 24px;
-      color: inherit;
-      border: 1px solid #8C8485;
-      width: 40px;
-      height: 40px;
-      line-height: 38px;
-      display: inline-block;
-      text-align: center;
-      border-radius: 50%;
-      margin: 6px 8px;
-    }
+      <div class="product-card">
+        <img src="Images/donuts.jpg">
+        <div class="product-details">
+          <h3>Donuts</h3>
+          <p>4 products</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .footer .social a:hover {
-      color: #D9CCC5;
-      border-color: #D9CCC5;
-    }
+  <section class="insta-section">
+    <div class="insta-details">
+      <h2>Instagram</h2>
+      <p>Check our profile</p>
+      <div class="insta-id">
+        <i class="fab fa-instagram"></i>
+        <a href="#"><p>Cakelicious</p></a>
+      </div>
+    </div>
+    <div class="insta-pics">
+      <img src="Images/instapic1.jpg">
+      <img src="Images/instapic3.jpg">
+      <img src="Images/instapic2.jpg">
+      <img src="Images/instapic4.jpg">
+    </div>
+  </section>
 
-    .footer ul {
-      margin-top: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 0;
-      text-align: center;
+  <footer>
+    <div class="footer-left">
+      <div class="links">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & COnditions</a></li>
+          <li><a href="#">Cookies Policy</a></li>
+        </ul>
+      </div>
 
-    }
+      <div class="links">
+        <ul>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </div>
+    </div>
 
-    .footer ul a {
-      color: inherit;
-      text-decoration: none;
-
-    }
-
-    .footer ul li {
-      display: inline-block;
-      padding: 0 15px;
-
-    }
-
-    .footer ul li a:hover {
-      color: #D9CCC5;
-
-    }
-
-    .footer .copyright {
-      margin-top: 15px;
-      text-align: center;
-      color: #8C8485;
-      font-size: 13px;
-    }
-  </style>
-
+    <div class="footer-right">
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <p>020-26125516</p>
+      <p>11, St. John's Road, Mumbai</p>
+    </div>
+  </footer>
 </body>
-
 </html>
