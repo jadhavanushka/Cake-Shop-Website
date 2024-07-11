@@ -270,7 +270,7 @@
         });
 
         function filterProducts(category) {
-            let cards = document.querySelectorAll('.card');
+            const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
                     card.style.display = 'block';
@@ -281,8 +281,8 @@
         }
 
         function sortProducts(criteria) {
-            let productList = document.getElementById('product-list');
-            let cards = Array.from(document.querySelectorAll('.card'));
+            const productList = document.getElementById('product-list');
+            const cards = Array.from(document.querySelectorAll('.card'));
 
             if (criteria === 'highest') {
                 cards.sort((a, b) => b.getAttribute('data-price') - a.getAttribute('data-price'));
@@ -299,6 +299,23 @@
                 productList.appendChild(card);
             });
         }
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const category = getQueryParam('category') || 'all';
+            document.querySelectorAll('.categories li').forEach(link => {
+                if (link.getAttribute('data-category') === category) {
+                    link.classList.add('current');
+                } else {
+                    link.classList.remove('current');
+                }
+            });
+            filterProducts(category);
+        });
     </script>
 </body>
 
