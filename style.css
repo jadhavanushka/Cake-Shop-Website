@@ -4,37 +4,27 @@
   box-sizing: border-box;
 }
 
-/* Total scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  /* Width of the scrollbar */
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #212121;
-  /* Color of the scrollbar track */
-  border-radius: 10px;
-  /* Rounded corners for the scrollbar track */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #2d2d2d;
-  /* Color of the scrollbar handle */
-  border-radius: 10px;
-  /* Rounded corners for the scrollbar handle */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3d3d3d;
-  /* Color of the scrollbar handle on hover */
-}
-
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d;
 }
 
 body {
@@ -42,19 +32,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #0a0a0a;
   color: #fff;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-}
-
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 48px 120px;
 }
 
 ul {
@@ -74,9 +51,47 @@ h2 {
   font-size: 48px;
 }
 
-
 h3 {
   font-size: 36px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+button:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  color: #000;
+}
+
+option {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 48px 120px;
 }
 
 .logo {
@@ -277,7 +292,7 @@ footer p {
 }
 
 
-/* For tablets and larger screens */
+/* For tablets and smaller screens */
 @media (max-width: 720px) {
   nav {
     padding: 24px 48px;
@@ -293,6 +308,11 @@ footer p {
 
   h3 {
     font-size: 24px;
+  }
+
+  button,
+  select {
+    padding: 8px 12px;
   }
 
   .logo {
@@ -372,7 +392,6 @@ footer p {
     height: 169px;
   }
 
-
   footer {
     padding: 48px;
   }
@@ -382,9 +401,9 @@ footer p {
   }
 
   footer .socials {
-    gap:1em;
+    gap: 1em;
   }
-  
+
   footer .footer-right {
     gap: 1em;
   }
@@ -393,12 +412,11 @@ footer p {
     font-size: 24px;
     color: #aaaaaa;
   }
-  
+
   footer p {
     color: #7a7a7a;
     font-size: 16px;
   }
-  
 }
 
 @media (max-width: 1200px) {
@@ -430,12 +448,9 @@ footer p {
     padding: 0.5em 1em;
   }
 
-
   footer .footer-right {
     width: 100%;
     justify-content: space-between;
     align-items: center;
   }
-
-
 }

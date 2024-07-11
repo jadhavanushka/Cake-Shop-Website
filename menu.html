@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="menu-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -14,33 +16,32 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img class="logo" src="Images/logo.png"></a>
-            <ul class="navbar">
+            <img class="logo" src="Images/logo.png">
+
+            <ul class="main-nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="../menu.html">Menu</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutus.html">About</a></li>
             </ul>
         </nav>
-
-        <div class="container">
-            <div class="categories">
-                <a href="#" class="current" data-category="all">All</a>
-                <a href="#" data-category="cakes">Cakes</a>
-                <a href="#" data-category="pastries">Pastries</a>
-                <a href="#" data-category="cupcakes">Cupcakes</a>
-                <a href="#" data-category="donuts">Donuts</a>
-            </div>
-        </div>
-
-        <div class="path">
-            <a href="index.html">Home</a>&gt;
-            <a href="#">Menu</a>
-        </div>
     </header>
 
+    <ul class="categories">
+        <li class="current" data-category="all">All</li>
+        <li data-category="cakes">Cakes</li>
+        <li data-category="pastries">Pastries</li>
+        <li data-category="cupcakes">Cupcakes</li>
+        <li data-category="donuts">Donuts</li>
+    </ul>
+
+    <div class="path">
+        <a href="index.html">Home</a>&gt;
+        <a href="#">Menu</a>
+    </div>
+
     <section class="sort">
+        <p>Sort by:</p>
         <div class="sort-btn">
-            <h2>Sort by:</h2>
             <select onchange="sortProducts(this.value)">
                 <option value="popular">Relevant</option>
                 <option value="highest">Highest price first</option>
@@ -49,175 +50,215 @@
         </div>
     </section>
 
-    <section class="catalog">
-        <div>
-            <ul id="product-list">
-                <!-- cakes -->
-                <li class="card" data-category="cakes" data-price="549">
-                    <a href="Product pages/1.Choco truffle.html"><img src="Images/1. Chocolate truffle.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/1.Choco truffle.html">Chocolate Truffle Cake</a></p>
-                    <p class="price">Rs. 549</p>
-                    <p><a href="#"><button>Order Now</button></a></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="799">
-                    <a href="Product pages/2.Hazelnut Choco.html"><img src="Images/2. Hazelnut chocolate.png" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/2.Hazelnut Choco.html">Hazelnut Chocolate Cake</a>
-                    </p>
-                    <p class="price">Rs. 799</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="599">
-                    <a href="Product pages/3.Soft vanilla.html"><img src="Images/3.Soft vanilla.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/3.Soft vanilla.html">Soft Vanilla Cake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="599">
-                    <a href="Product pages/4.Butterscotch.html"><img src="Images/4. Butterscotch.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/4.Butterscotch.html">Butterscotch Cake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="549">
-                    <a href="Product pages/5.Black forest.html"><img src="Images/5. Black forest.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/5.Black forest.html">Black Forest Cake</a></p>
-                    <p class="price">Rs. 549</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="799">
-                    <a href="Product pages/6. Red velvet.html"><img src="Images/6. Red velvet.jpg" style="width:100%"> </a>
-                    <p class="product-name"><a href="Product pages/6. Red velvet.html">Red Velvet Cake</a></p>
-                    <p class="price">Rs. 799</p>
-                    <p><a href="#"><button>Order Now</button></a></p>
-                </li>
-                <li class="card" data-category="cakes" data-price="649">
-                    <a href="Product pages/7. Pineapple.html"><img src="Images/7. Pineapple.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/7. Pineapple.html">Pineapple Cream Cake</a></p>
-                    <p class="price">Rs. 649</p>
-                    <p><button>Order Now</button></p>
-                </li>
+    <section class="catalog" id="product-list">
+        <!-- cakes -->
+        <div class="card" data-category="cakes" data-price="549">
+            <a href="Product pages/1.Choco truffle.html">
+                <img src="Images/1. Chocolate truffle.jpg">
+                <p class="product-name">Chocolate Truffle Cake</p>
+            </a>
+            <p class="price">Rs. 549</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="799">
+            <a href="Product pages/2.Hazelnut Choco.html">
+                <img src="Images/2. Hazelnut chocolate.png">
+                <p class="product-name">Hazelnut Chocolate Cake</p>
+            </a>
+            <p class="price">Rs. 799</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="599">
+            <a href="Product pages/3.Soft vanilla.html">
+                <img src="Images/3.Soft vanilla.jpg">
+                <p class="product-name">Soft Vanilla Cake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="599">
+            <a href="Product pages/4.Butterscotch.html">
+                <img src="Images/4. Butterscotch.jpg">
+                <p class="product-name">Butterscotch Cake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="549">
+            <a href="Product pages/5.Black forest.html">
+                <img src="Images/5. Black forest.jpg">
+                <p class="product-name">Black Forest Cake</p>
+            </a>
+            <p class="price">Rs. 549</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="799">
+            <a href="Product pages/6. Red velvet.html">
+                <img src="Images/6. Red velvet.jpg">
+                <p class="product-name">Red Velvet Cake</p>
+            </a>
+            <p class="price">Rs. 799</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="649">
+            <a href="Product pages/7. Pineapple.html">
+                <img src="Images/7. Pineapple.jpg">
+                <p class="product-name">Pineapple Cream Cake</p>
+            </a>
+            <p class="price">Rs. 649</p>
+            <button>Order now</button>
+        </div>
 
-                <!-- cupcakes -->
-                <li class="card" data-category="cupcakes" data-price="599">
-                    <a href="Product pages/8. Choco chip.html"><img src="Images/8. Choco chip.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/8. Choco chip.html">Choco-Chip Cupcake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cupcakes" data-price="599">
-                    <a href="Product pages/9. Vanilla ccake.html"><img src="Images/9. Vanilla ccake.jpg" style="width:100%"> </a>
-                    <p class="product-name"><a href="Product pages/9. Vanilla ccake.html">Vanilla Cupcake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><a href="#"><button>Order Now</button></a></p>
-                </li>
-                <li class="card" data-category="cupcakes" data-price="599">
-                    <a href="Product pages/10. Strawberry ccake.html"><img src="Images/10. Strawberry ccake.jpg"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/10. Strawberry ccake.html">Strawberry Cupcake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cupcakes" data-price="599">
-                    <a href="Product pages/11. Rainbow ccake.html"><img src="Images/11. Rainbow ccake.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/11. Rainbow ccake.html">Rainbow Cupcake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="cupcakes" data-price="599">
-                    <a href="Product pages/12. Redvelvet ccake.html"><img src="Images/12. Redvelvet ccake.jpg" style="width:100%">
-                    </a>
-                    <p class="product-name"><a href="Product pages/12. Redvelvet ccake.html">Red Velvet Cupcake</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><a href="#"><button>Order Now</button></a></p>
-                </li>
+        <!-- cupcakes -->
+        <div class="card" data-category="cupcakes" data-price="599">
+            <a href="Product pages/8. Choco chip.html">
+                <img src="Images/8. Choco chip.jpg">
+                <p class="product-name">Choco-Chip Cupcake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="599">
+            <a href="Product pages/9. Vanilla ccake.html">
+                <img src="Images/9. Vanilla ccake.jpg">
 
-                <!-- donuts -->
-                <li class="card" data-category="donuts" data-price="599">
-                    <a href="Product pages/13. Rainbow Donut.html"><img src="Images/13. Rainbow donut.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/13. Rainbow Donut.html">Rainbow Crunch Donuts</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="donuts" data-price="599">
-                    <a href="Product pages/14. Redvelvet donut.html"><img src="Images/14. Redvelvet donut.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/14. Redvelvet donut.html">Red Velvet Donut</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="donuts" data-price="599">
-                    <a href="Product pages/15. Chocolate donut.html"><img src="Images/15. Chocolate donut.jpg" style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/15. Chocolate donut.html">Chocolate Donut</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="donuts" data-price="599">
-                    <a href="Product pages/16. Chocolate caramel donut.html"><img src="Images/16. Chocolate caramel donut.jpg"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/16. Chocolate caramel donut.html">Chocolate Caramel
-                            Donut</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
+                <p class="product-name">Vanilla Cupcake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="599">
+            <a href="Product pages/10. Strawberry ccake.html">
+                <img src="Images/10. Strawberry ccake.jpg">
+                <p class="product-name">Strawberry Cupcake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="599">
+            <a href="Product pages/11. Rainbow ccake.html">
+                <img src="Images/11. Rainbow ccake.jpg">
+                <p class="product-name">Rainbow Cupcake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="599">
+            <a href="Product pages/12. Redvelvet ccake.html">
+                <img src="Images/12. Redvelvet ccake.jpg">
+                <p class="product-name">Red Velvet Cupcake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
 
-                <!-- pastries -->
-                <li class="card" data-category="pastries" data-price="599">
-                    <a href="Product pages/17. Classic Chocolate Pastry.html"><img src="Images/17. Classic Chocolate Pastry.jpeg"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/17. Classic Chocolate Pastry.html">Classic Chocolate
-                            Pastry</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="pastries" data-price="599">
-                    <a href="Product pages/18. Blueberry Pastry.html"><img src="Images/18. Blueberry pastry.jpg"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/18. Blueberry Pastry.html">Blueberry Pastry</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="pastries" data-price="599">
-                    <a href="Product pages/19. Black forest pastry.html"><img src="Images/19. Black forest pastry.jpg"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/19. Black forest pastry.html">Black Forest Pastry</a>
-                    </p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-                <li class="card" data-category="pastries" data-price="599">
-                    <a href="Product pages/20. Hazelnut Chocolate Pastry.html"><img src="Images/20. Hazelnut Chocolate Pastry.webp"
-                            style="width:100%"></a>
-                    <p class="product-name"><a href="Product pages/20. Hazelnut Chocolate Pastry.html">Hazelnut Chocolate
-                            Pastry</a></p>
-                    <p class="price">Rs. 599</p>
-                    <p><button>Order Now</button></p>
-                </li>
-            </ul>
+        <!-- donuts -->
+        <div class="card" data-category="donuts" data-price="599">
+            <a href="Product pages/13. Rainbow Donut.html">
+                <img src="Images/13. Rainbow donut.jpg">
+                <p class="product-name">Rainbow Crunch Donut
+                </p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="donuts" data-price="599">
+            <a href="Product pages/14. Redvelvet donut.html">
+                <img src="Images/14. Redvelvet donut.jpg">
+                <p class="product-name">Red Velvet Donut
+                </p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="donuts" data-price="599">
+            <a href="Product pages/15. Chocolate donut.html">
+                <img src="Images/15. Chocolate donut.jpg">
+                <p class="product-name">Chocolate Donut</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="donuts" data-price="599">
+            <a href="Product pages/16. Chocolate caramel donut.html">
+                <img src="Images/16. Chocolate caramel donut.jpg">
+                <p class="product-name">Chocolate Caramel Donut</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+
+        <!-- pastries -->
+        <div class="card" data-category="pastries" data-price="599">
+            <a href="Product pages/17. Classic Chocolate Pastry.html">
+                <img src="Images/17. Classic Chocolate Pastry.jpeg">
+                <p class="product-name">Classic Chocolate Pastry</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="pastries" data-price="599">
+            <a href="Product pages/18. Blueberry Pastry.html">
+                <img src="Images/18. Blueberry pastry.jpg">
+                <p class="product-name">Blueberry Pastry</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="pastries" data-price="599">
+            <a href="Product pages/19. Black forest pastry.html">
+                <img src="Images/19. Black forest pastry.jpg">
+                <p class="product-name">Black Forest Pastry</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="pastries" data-price="599">
+            <a href="Product pages/20. Hazelnut Chocolate Pastry.html">
+                <img src="Images/20. Hazelnut Chocolate Pastry.webp">
+                <p class="product-name">Hazelnut Chocolate Pastry</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
         </div>
     </section>
 
-    <div class="footer">
-        <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    <footer>
+        <div class="footer-left">
+            <div class="links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & COnditions</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
         </div>
 
-        <ul class="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="aboutus.html">About</a></li>
-        </ul>
-        <p class="copyright">
-            Cakelicious @2022.
-        </p>
-    </div>
+        <div class="footer-right">
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>020-26125516</p>
+            <p>11, St. John's Road, Mumbai</p>
+        </div>
+    </footer>
 
     <script>
-        document.querySelectorAll('.categories a').forEach(categoryLink => {
+        document.querySelectorAll('.categories li').forEach(categoryLink => {
             categoryLink.addEventListener('click', function (event) {
                 event.preventDefault();
 
-                document.querySelectorAll('.categories a').forEach(link => {
+                document.querySelectorAll('.categories li').forEach(link => {
                     link.classList.remove('current');
                 });
 
