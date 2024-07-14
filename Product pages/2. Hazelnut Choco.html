@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Velvet Donut</title>
+    <title>Hazelnut Chocolate Cake</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css"
@@ -30,7 +30,7 @@
             <li>All</li>
         </a>
         <a href="../menu.html?category=cakes">
-            <li>Cakes</li>
+            <li class="current">Cakes</li>
         </a>
         <a href="../menu.html?category=pastries">
             <li>Pastries</li>
@@ -39,27 +39,27 @@
             <li>Cupcakes</li>
         </a>
         <a href="../menu.html?category=donuts">
-            <li class="current">Donuts</li>
+            <li>Donuts</li>
         </a>
     </ul>
 
     <div class="path">
         <a href="../index.html">Home</a>&gt;
         <a href="../menu.html">Menu</a>&gt;
-        <a href="#">Red Velvet Donut</a>
+        <a href="#">Hazelnut Chocolate Cake</a>
     </div>
 
     <section class="product-section">
-        <img src="../Images/14. Redvelvet donut.jpg" class="product-img">
+        <img src="../Images/2. Hazelnut chocolate.png" class="product-img">
         <div class="product-details">
-            <h3>Red Velvet Donut</h3>
-            <p class="price">Rs. <span id="price">399</span></p>
+            <h3>Hazelnut Chocolate Cake</h3>
+            <p class="price">Rs. <span id="price">799</span></p>
 
             <div class="quantity-cta">
                 <select id="quantity" onclick="changePrice()">
-                    <option value="half">Set of 4</option>
-                    <option value="one">Set of 8</option>
-                    <option value="two">Set of 12</option>
+                    <option value="half">0.5 Kg</option>
+                    <option value="one">1 Kg</option>
+                    <option value="two">2 Kg</option>
                 </select>
                 <div>
                     <!-- <button>Add to Cart</button> -->
@@ -75,15 +75,16 @@
 
             <div id="details" class="details">
                 <ul id="highlights" style="display:none;">
-                    <li>Flavour: Red Velvet</li>
-                    <li>Type of Dough: Cake Dough</li>
-                    <li>Filling: Cream Cheese</li>
-                    <li>Toppings: Cream Cheese Glaze & Red Velvet Crumbs</li>
+                    <li>Cake Flavour: Hazelnut Chocolate Cake</li>
+                    <li>Type of Cake: Cream</li>
+                    <li>Weight: Half Kg</li>
+                    <li>Shape: Round</li>
+                    <li>Serves: 4-6 People</li>
                 </ul>
 
                 <p id="description">
-                    Your favourite cake just got an upgrade! That’s right, we made it a donut. It taste like
-                    love and looks like it too. Red Velvet donut with white chocolate ganache, cream cheese.</p>
+                    An irresistible blend of cappuccino and chocolate cake filled with buttercream icing
+                    along with hazelnuts is the most scrumptious combination. </p>
             </div>
         </div>
     </section>
@@ -91,39 +92,36 @@
 
     <h3 class="similar-products-title">Similar products you might like</h3>
     <section class="catalog suggested" id="product-list">
-
-        <div class="card" data-category="cakes" data-price="799">
-            <a href="6. Red velvet.html">
-                <img src="../Images/6. Red velvet.jpg">
-                <p class="product-name">Red Velvet Cake</p>
+        <div class="card" data-category="cakes" data-price="549">
+            <a href="1. choco truffle.html">
+                <img src="../Images/1. Chocolate truffle.jpg">
+                <p class="product-name">Chocolate Truffle Cake</p>
             </a>
-            <p class="price">Rs. 799</p>
+            <p class="price">Rs. 549</p>
             <button>Order now</button>
         </div>
-        <div class="card" data-category="cupcakes" data-price="299">
-            <a href="12. Redvelvet ccake.html">
-                <img src="../Images/12. Redvelvet ccake.jpg">
-                <p class="product-name">Red Velvet Cupcake</p>
+        <div class="card" data-category="cakes" data-price="599">
+            <a href="4. Butterscotch.html">
+                <img src="../Images/4. Butterscotch.jpg">
+                <p class="product-name">Butterscotch Cake</p>
+            </a>
+            <p class="price">Rs. 599</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cakes" data-price="549">
+            <a href="5. black forest.html">
+                <img src="../Images/5. Black forest.jpg">
+                <p class="product-name">Black Forest Cake</p>
+            </a>
+            <p class="price">Rs. 549</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="pastries" data-price="599">
+            <a href="20. Hazelnut Chocolate Pastry.html">
+                <img src="../Images/20. Hazelnut Chocolate Pastry.webp">
+                <p class="product-name">Hazelnut Chocolate Pastry</p>
             </a>
             <p class="price">Rs. 299</p>
-            <button>Order now</button>
-        </div>
-
-        <div class="card" data-category="donuts" data-price="299">
-            <a href="13. Rainbow Donut.html">
-                <img src="../Images/13. Rainbow donut.jpg">
-                <p class="product-name">Rainbow Crunch Donut
-                </p>
-            </a>
-            <p class="price">Rs. 399</p>
-            <button>Order now</button>
-        </div>
-        <div class="card" data-category="donuts" data-price="299">
-            <a href="15. Chocolate donut.html">
-                <img src="../Images/15. Chocolate donut.jpg">
-                <p class="product-name">Chocolate Donut</p>
-            </a>
-            <p class="price">Rs. 399</p>
             <button>Order now</button>
         </div>
     </section>
@@ -169,16 +167,16 @@
 
             switch (selectedQuantity) {
                 case "half":
-                    priceElement.textContent = 399;
-                    break;
-                case "one":
                     priceElement.textContent = 799;
                     break;
+                case "one":
+                    priceElement.textContent = 1499;
+                    break;
                 case "two":
-                    priceElement.textContent = 1149;
+                    priceElement.textContent = 3949;
                     break;
                 default:
-                    priceElement.textContent = 399;
+                    priceElement.textContent = 799;
                     break;
             }
         }

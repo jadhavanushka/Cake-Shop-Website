@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Velvet Cupcake</title>
-    <link rel="stylesheet" type="text/css" href="product-style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -14,231 +15,191 @@
 <body>
     <header>
         <nav>
-            <a href="../index.html"><img class="logo" src="../Images/logo.png"></a>
-            <ul class="navbar">
+            <img class="logo" src="../Images/logo.png">
+
+            <ul class="main-nav">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../menu.html">Menu</a></li>
                 <li><a href="../aboutus.html">About</a></li>
             </ul>
         </nav>
-
-
-
-        <!-- <div class="container">
-            <div class="categories">
-                <a href="../menu.html">All</a>
-                <a href="menu copy.html">Cakes</a>
-                <a href="#">Pastries</a>
-                <a href="#" class="current">Cupcakes</a>
-                <a href="menu copy 3.html">Donuts</a>
-            </div>
-
-        </div> -->
-        <div class="path">
-            <a href="../index.html">Home</a>&gt;
-            <a href="../menu.html">Menu</a>&gt;
-            <!-- <a href="menu copy 2.html">Cupcakes</a>&gt; -->
-            <a href="#">Red Velvet Cupcake</a>
-        </div>
-
-
     </header>
 
+    <ul class="categories">
+        <a href="../menu.html">
+            <li>All</li>
+        </a>
+        <a href="../menu.html?category=cakes">
+            <li>Cakes</li>
+        </a>
+        <a href="../menu.html?category=pastries">
+            <li>Pastries</li>
+        </a>
+        <a href="../menu.html?category=cupcakes">
+            <li class="current">Cupcakes</li>
+        </a>
+        <a href="../menu.html?category=donuts">
+            <li>Donuts</li>
+        </a>
+    </ul>
 
-    <section class="product">
-        <div class="container">
-            <img src="../Images/12. Redvelvet ccake.jpg" class="product-img" alt="Illustration">
-            <div class="right-col">
-                <h1>Red Velvet Cupcake</h1>
-                <p class="price">Rs.
-                    <span class="pr">599</span>
-                </p>
-
-                <div class="weight">
-                    <!-- <h2>Weight:</h2> -->
-                    <select id="weight" onclick="getOption()">
-                        <option value="half">Set of 4</option>
-                        <option value="one">Set of 8</option>
-                        <option value="two">Set of 12</option>
-                    </select>
-                    <div class="atc-btns">
-                        <!-- <button>Add to Cart</button> -->
-                        <button>Order Now</button>
-                    </div>
-                </div>
-
-
-                <script>
-                    function getOption() {
-                        selectElement = document.querySelector('#weight');
-                        switch (selectElement.options[selectElement.selectedIndex].value) {
-                            case "one":
-                                document.querySelector('.pr').textContent = 1199;
-                                break;
-                            case "two":
-                                document.querySelector('.pr').textContent = 1799;
-                                break;
-                            case "half":
-                                document.querySelector('.pr').textContent = 599;
-                        }
-                    }
-
-
-                </script>
-
-
-
-
-                <div id="details-btns" class="details-btns">
-
-                    <button onclick="product_des()" class="button current-btn">Description</button>
-                    <button onclick="product_hls()" class="button">Highlights</button>
-                </div>
-
-                <div id="details" class="details">
-                    <ul id="hls" style="display:none;">
-                        <li>Flavor: Red Velvet</li>
-                        <li>Type of Dessert: Cupcake</li>
-                        <li>Shape: Round</li>
-                    </ul>
-
-                    <p id="des">These 4 gorgeous Red Velvet cupcakes are a fine choice if you wish to make someone
-                        special,
-                        and feel all pampered and loved. </p>
-                </div>
-
-
-                <script>
-                    // -------------description/Highlights-----------
-                    function product_des() {
-                        var x = document.getElementById("des");
-                        var y = document.getElementById("hls");
-                        x.style.display = "block";
-                        y.style.display = "none";
-                    }
-
-                    function product_hls() {
-                        var x = document.getElementById("des");
-                        var y = document.getElementById("hls");
-                        x.style.display = "none";
-                        y.style.display = "block";
-                    }
-
-
-
-                    // -------------curent button--------
-                    var header = document.getElementById("details-btns");
-                    var btns = header.getElementsByClassName("button");
-                    for (var i = 0; i < btns.length; i++) {
-                        btns[i].addEventListener("click", function () {
-                            var current = document.getElementsByClassName("current-btn");
-                            current[0].className = current[0].className.replace(" current-btn", "");
-                            this.className += " current-btn";
-                        });
-                    }
-
-                </script>
-
-
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="similar">
-        <div class="container">
-            <h1>Similar products you might like</h1>
-
-            <div class="catalog">
-                <div>
-                    <ul>
-                        <li>
-                            <div class="card">
-
-                                <a href="8. Choco chip.html"><img src="../Images/8. Choco chip.jpg"
-                                        style="width:100%"></a>
-                                <p class="product-name"><a href="8. Choco chip.html">Choco-Chip Cupcake</a></p>
-                                <p class="price">Rs. 599</p>
-                                <p><button>Order Now</button></p>
-                            </div>
-                        </li>
-
-
-
-
-                        <li>
-                            <div class="card">
-
-                                <a href="9. Vanilla ccake.html"><img src="../Images/9. Vanilla ccake.jpg"
-                                        style="width:100%"> </a>
-                                <p class="product-name"><a href="9. Vanilla ccake.html">Vanilla Cupcake</a></p>
-                                <p class="price">Rs. 599</p>
-                                <p><a href="#"><button>Order Now</button></a></p>
-                            </div>
-                        </li>
-
-
-
-
-                        <li>
-                            <div class="card">
-
-                                <a href="10. Strawberry ccake.html"><img src="../Images/10. Strawberry ccake.jpg"
-                                        style="width:100%"></a>
-                                <p class="product-name"><a href="10. Strawberry ccake.html">Strawberry Cupcake</a></p>
-                                <p class="price">Rs. 599</p>
-                                <p><button>Order Now</button></p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card">
-
-                                <a href="11. Rainbow ccake.html"><img src="../Images/11. Rainbow ccake.jpg"
-                                        style="width:100%"></a>
-                                <p class="product-name"><a href="11. Rainbow ccake.html">Rainbow Cupcake</a></p>
-                                <p class="price">Rs. 599</p>
-                                <p><button>Order Now</button></p>
-                            </div>
-                        </li>
-
-
-
-                    </ul>
-
-                </div>
-            </div>
-            <a href="../menu.html">
-                <p>See more</p>
-            </a>
-        </div>
-
-
-
-    </section>
-
-
-
-    <div class="footer">
-        <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-
-        <ul class="list">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../menu.html">Menu</a></li>
-            <li><a href="../aboutus.html">About</a></li>
-        </ul>
-        <p class="copyright">
-            Cakelicious @2022.
-        </p>
+    <div class="path">
+        <a href="../index.html">Home</a>&gt;
+        <a href="../menu.html">Menu</a>&gt;
+        <a href="#">Red Velvet Cupcake</a>
     </div>
 
+    <section class="product-section">
+        <img src="../Images/12. Redvelvet ccake.jpg" class="product-img">
+        <div class="product-details">
+            <h3>Red Velvet Cupcake</h3>
+            <p class="price">Rs. <span id="price">299</span></p>
 
+            <div class="quantity-cta">
+                <select id="quantity" onclick="changePrice()">
+                    <option value="half">Set of 4</option>
+                    <option value="one">Set of 8</option>
+                    <option value="two">Set of 12</option>
+                </select>
+                <div>
+                    <!-- <button>Add to Cart</button> -->
+                    <button>Order Now</button>
+                </div>
+            </div>
+
+            <div id="details-tabs" class="details-tabs">
+                <button onclick="toggleTab('description')" class="tab current-tab"
+                    data-tab="description">Description</button>
+                <button onclick="toggleTab('highlights')" class="tab" data-tab="highlights">Highlights</button>
+            </div>
+
+            <div id="details" class="details">
+                <ul id="highlights" style="display:none;">
+                    <li>Flavor: Red Velvet</li>
+                    <li>Type of Dessert: Cupcake</li>
+                    <li>Shape: Round</li>
+                </ul>
+
+                <p id="description">
+                    These 4 gorgeous Red Velvet cupcakes are a fine choice if you wish to make someone
+                    special,
+                    and feel all pampered and loved. </p>
+            </div>
+        </div>
+    </section>
+
+
+    <h3 class="similar-products-title">Similar products you might like</h3>
+    <section class="catalog suggested" id="product-list">
+        <div class="card" data-category="cakes" data-price="799">
+            <a href="6. Red velvet.html">
+                <img src="../Images/6. Red velvet.jpg">
+                <p class="product-name">Red Velvet Cake</p>
+            </a>
+            <p class="price">Rs. 799</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="299">
+            <a href="9. Vanilla ccake.html">
+                <img src="../Images/9. Vanilla ccake.jpg">
+
+                <p class="product-name">Vanilla Cupcake</p>
+            </a>
+            <p class="price">Rs. 299</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="cupcakes" data-price="299">
+            <a href="10. Strawberry ccake.html">
+                <img src="../Images/10. Strawberry ccake.jpg">
+                <p class="product-name">Strawberry Cupcake</p>
+            </a>
+            <p class="price">Rs. 299</p>
+            <button>Order now</button>
+        </div>
+        <div class="card" data-category="donuts" data-price="299">
+            <a href="14. Redvelvet donut.html">
+                <img src="../Images/14. Redvelvet donut.jpg">
+                <p class="product-name">Red Velvet Donut
+                </p>
+            </a>
+            <p class="price">Rs. 399</p>
+            <button>Order now</button>
+        </div>
+
+    </section>
+
+    <a href="../menu.html">
+        <p class="see-more-btn">See more</p>
+    </a>
+
+    <footer>
+        <div class="footer-left">
+            <div class="links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & COnditions</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="../aboutus.html">About</a></li>
+                    <li><a href="../Gallery.html">Gallery</a></li>
+                    <li><a href="../menu.html">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>020-26125516</p>
+            <p>11, St. John's Road, Mumbai</p>
+        </div>
+    </footer>
+
+    <script>
+        function changePrice() {
+            var selectedQuantity = document.querySelector('#quantity').value;
+            var priceElement = document.querySelector('#price');
+
+            switch (selectedQuantity) {
+                case "half":
+                    priceElement.textContent = 299;
+                    break;
+                case "one":
+                    priceElement.textContent = 599;
+                    break;
+                priceElement.textContent = 849;    break;
+                default:
+                    priceElement.textContent = 299;
+                    break;
+            }
+        }
+
+        function toggleTab(tabId) {
+            var descriptionTab = document.getElementById("description");
+            var highlightsTab = document.getElementById("highlights");
+
+            if (tabId === 'description') {
+                descriptionTab.style.display = "block";
+                highlightsTab.style.display = "none";
+            } else if (tabId === 'highlights') {
+                descriptionTab.style.display = "none";
+                highlightsTab.style.display = "block";
+            }
+
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(function (tab) {
+                tab.classList.remove('current-tab');
+            });
+            document.querySelector('.tab[data-tab="' + tabId + '"]').classList.add('current-tab');
+        }
+    </script>
 </body>
 
 </html>
