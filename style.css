@@ -219,6 +219,11 @@ nav {
 
 .insta-section .insta-details .insta-id p {
   color: #f4f4f4;
+  transition: all 0.2s;
+}
+
+.insta-section .insta-details .insta-id p:hover {
+  transform: translateY(-3px);
 }
 
 .insta-section .insta-details i {
@@ -285,6 +290,11 @@ footer .socials {
 footer .socials i {
   font-size: 36px;
   color: #aaaaaa;
+  transition: all 0.2s;
+}
+
+footer .socials i:hover {
+  transform: translateY(-3px);
 }
 
 footer p {
@@ -942,5 +952,153 @@ footer p {
 
   .see-more-btn {
     font-size: 16px;
+  }
+}
+
+
+/* Checkout */
+
+.checkout-title {
+  padding: 48px;
+  text-align: center;
+}
+
+.checkout {
+  padding: 48px 120px;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+#checkout-form {
+  width: 30%;
+  min-width: fit-content;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.form-group-2 {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin: 0 0.5em 0.5em 0;
+  font-size: 20px;
+  color: #f4f4f4;
+}
+
+
+.card-detail {
+  display: block;
+  margin: 0;
+}
+
+
+.form-group input,
+.form-group textarea {
+  padding: 1em;
+  border: 1px solid #3d3d3d;
+  background: #202020;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1em;
+  border: 1px solid #3d3d3d;
+  background: #202020;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background: #2d2d2d;
+  color: #ddd;
+  height: fit-content;
+  font-size: 20px;
+}
+
+.order-summary h3 {
+  color: #f4f4f4;
+  margin-bottom: 0.5em;
+}
+
+.order-summary .order-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  border-bottom: 1px solid #686868;
+}
+
+.order-summary .order-total {
+  color: #f4f4f4;
+  font-weight: bold;
+}
+
+.order-summary button {
+  margin: 3em 0;
+  padding: 16px 32px;
+
+}
+
+.order-summary .order-note {
+  color: #aaaaaa;
+  font-size: 16px;
+
+}
+
+@media (max-width: 1024px) {
+  .checkout {
+    flex-direction: column;
+    gap: 4em;
+    width: 100%;
+    align-items: center;
+  }
+
+  #checkout-form {
+    width: 80%;
+  }
+
+  .order-summary {
+    width: 80%;
+
+  }
+}
+
+@media (max-width: 720px) {
+  .checkout-title {
+    padding: 24px;
+  }
+
+  .checkout {
+    padding: 24px 48px;
+  }
+
+  #checkout-form, .order-summary {
+    width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 1.5em;
+  }
+  .form-group label, .order-summary {
+    font-size: 16px;
+  }
+
+  #card-details{
+    margin-bottom: 0;
   }
 }

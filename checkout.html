@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="Images/logo.png">
+
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="checkout-title">Checkout</h2>
+    <section class="checkout">
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="address">Payment Method</label>
+
+                <div class="form-group-2">
+                    <input type="radio" name="payment" value="cod" onclick="toggleCardDetails(false)" required>
+                    Cash on Delivery
+                    <input type="radio" name="payment" value="card" onclick="toggleCardDetails(true)" required>
+                    Card
+                </div>
+            </div>
+
+            <div id="card-details" class="form-group" style="display: none;">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                </div>
+                <div class="form-group-2">
+                    <div class="form-group card-detail">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group card-detail">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional comments</label>
+                <textarea id="comments" name="comments" required></textarea>
+            </div>
+
+        </form>
+        <div class="order-summary">
+            <h3>Your total</h3>
+            <div class="order-detail">
+                <p>Subtotal</p>
+                <p>Rs. 599</p>
+            </div>
+            <div class="order-detail">
+                <p>Delivery</p>
+                <p>Rs. 100</p>
+            </div>
+            <div class="order-detail">
+                <p>Total</p>
+                <p class="order-total">Rs. 699</p>
+            </div>
+            <button type="submit">Place Order</button>
+            <p class="order-note">You will receive SMS and email with the delivery details.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <div class="links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & COnditions</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>020-26125516</p>
+            <p>11, St. John's Road, Mumbai</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCardDetails(show) {
+            var cardDetails = document.getElementById('card-details');
+            if (show) {
+                cardDetails.style.display = 'block';
+                document.querySelectorAll('#card-details input').forEach(input => input.required = true);
+            } else {
+                cardDetails.style.display = 'none';
+                document.querySelectorAll('#card-details input').forEach(input => input.required = false);
+            }
+        }
+
+        document.querySelector('button').addEventListener('click', function (event) {
+            event.preventDefault();
+            alert('Thank you for your order!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
