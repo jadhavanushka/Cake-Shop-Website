@@ -158,8 +158,21 @@ nav {
   flex-direction: column;
 }
 
-.products-section h2 {
+.products-section .products-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 48px 16px;
+}
+
+.products-section .products-title a {
+  font-size: 24px;
+  color: #aaa;
+  transition: all 0.2s;
+}
+
+.products-section .products-title a:hover {
+  transform: translateY(-3px);
 }
 
 .products-section .products {
@@ -174,10 +187,20 @@ nav {
   width: 48%;
 }
 
+.products-section .products a {
+  color: #f4f4f4;
+}
+
 .products-section .products img {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  transition: all 0.5s;
+}
+
+.products-section .products img:hover {
+  object-position: bottom;
+  opacity: .6;
 }
 
 .products-section .product-card .product-details {
@@ -542,6 +565,13 @@ footer p {
   padding: 1em;
   background-color: #222;
   text-align: center;
+  transition: all 0.5s;
+
+}
+
+.catalog .card:hover {
+  transform: translateY(-10px);
+
 }
 
 .catalog .card img {
@@ -569,7 +599,6 @@ footer p {
     width: 23%;
   }
 }
-
 
 @media (max-width: 1200px) {
   .categories {
@@ -705,6 +734,11 @@ footer p {
 .about-content .socials i {
   font-size: 24px;
   color: #ddd;
+  transition: all 0.2s;
+}
+
+.about-content .socials i:hover {
+  transform: translateY(-3px);
 }
 
 @media (max-width: 1200px) {
@@ -995,13 +1029,11 @@ footer p {
   color: #f4f4f4;
 }
 
-
 .card-detail {
   display: block;
   margin: 0;
 }
 
-
 .form-group input,
 .form-group textarea {
   padding: 1em;
@@ -1015,7 +1047,6 @@ footer p {
   border: 1px solid #3d3d3d;
   background: #202020;
 }
-
 
 textarea {
   resize: vertical;
@@ -1051,13 +1082,11 @@ textarea {
 .order-summary button {
   margin: 3em 0;
   padding: 16px 32px;
-
 }
 
 .order-summary .order-note {
   color: #aaaaaa;
   font-size: 16px;
-
 }
 
 @media (max-width: 1024px) {
@@ -1074,7 +1103,6 @@ textarea {
 
   .order-summary {
     width: 80%;
-
   }
 }
 
@@ -1087,18 +1115,21 @@ textarea {
     padding: 24px 48px;
   }
 
-  #checkout-form, .order-summary {
+  #checkout-form,
+  .order-summary {
     width: 100%;
   }
 
   .form-group {
     margin-bottom: 1.5em;
   }
-  .form-group label, .order-summary {
+
+  .form-group label,
+  .order-summary {
     font-size: 16px;
   }
 
-  #card-details{
+  #card-details {
     margin-bottom: 0;
   }
 }

@@ -15,7 +15,9 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="../Images/logo.png">
+            <a href="../index.html">
+                <img class="logo" src="../Images/logo.png">
+            </a>
 
             <ul class="main-nav">
                 <li><a href="../index.html">Home</a></li>
@@ -63,7 +65,7 @@
                 </select>
                 <div>
                     <!-- <button>Add to Cart</button> -->
-                                <a href="../checkout.html"><button>Order now</button></a>
+                    <a href="../checkout.html"><button>Order now</button></a>
 
                 </div>
             </div>
@@ -98,7 +100,7 @@
                 <p class="product-name">Red Velvet Cake</p>
             </a>
             <p class="price">Rs. 799</p>
-                        <a href="../checkout.html"><button>Order now</button></a>
+            <a href="../checkout.html"><button>Order now</button></a>
 
         </div>
         <div class="card" data-category="cupcakes" data-price="299">
@@ -108,7 +110,7 @@
                 <p class="product-name">Vanilla Cupcake</p>
             </a>
             <p class="price">Rs. 299</p>
-                        <a href="../checkout.html"><button>Order now</button></a>
+            <a href="../checkout.html"><button>Order now</button></a>
 
         </div>
         <div class="card" data-category="cupcakes" data-price="299">
@@ -117,7 +119,7 @@
                 <p class="product-name">Strawberry Cupcake</p>
             </a>
             <p class="price">Rs. 299</p>
-                        <a href="../checkout.html"><button>Order now</button></a>
+            <a href="../checkout.html"><button>Order now</button></a>
 
         </div>
         <div class="card" data-category="donuts" data-price="299">
@@ -127,7 +129,7 @@
                 </p>
             </a>
             <p class="price">Rs. 399</p>
-                        <a href="../checkout.html"><button>Order now</button></a>
+            <a href="../checkout.html"><button>Order now</button></a>
 
         </div>
 
@@ -142,7 +144,7 @@
             <div class="links">
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & COnditions</a></li>
+                    <li><a href="#">Terms &amp; COnditions</a></li>
                     <li><a href="#">Cookies Policy</a></li>
                 </ul>
             </div>
@@ -162,8 +164,8 @@
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
-            <p>020-26125516</p>
-            <p>11, St. John's Road, Mumbai</p>
+            <p><i class="fa-solid fa-phone" style="margin-right: 0.5em;"></i>020-26125516</p>
+            <p><i class="fa-solid fa-location-dot" style="margin-right: 0.5em;"></i>11, St. John's Road, Mumbai</p>
         </div>
     </footer>
 
@@ -179,7 +181,7 @@
                 case "one":
                     priceElement.textContent = 599;
                     break;
-                priceElement.textContent = 849;    break;
+                    priceElement.textContent = 849; break;
                 default:
                     priceElement.textContent = 299;
                     break;
