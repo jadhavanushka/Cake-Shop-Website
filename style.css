@@ -52,7 +52,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 button {
@@ -92,11 +92,11 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 48px 120px;
+  padding: 24px 120px;
 }
 
 .logo {
-  height: 60px;
+  height: 48px;
   width: auto;
 }
 
@@ -109,7 +109,7 @@ nav {
 .main-nav a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
   text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
 }
 
@@ -118,7 +118,7 @@ nav {
 }
 
 .main-nav li:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .main-content {
@@ -131,29 +131,28 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -160px;
+  margin-top: -100px;
 }
 
 .main-content-header {
   height: 80vh;
-  padding: 48px 120px;
+  padding: 24px 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
+  width: 70%;
   gap: 2em
 }
 
-
 .main-content-header p {
   width: 80%;
-  font-size: 24px;
+  font-size: 20px;
   color: #f4f4f4;
   line-height: 1.5em;
 }
 
 .products-section {
-  padding: 48px 120px;
+  padding: 24px 120px;
   display: flex;
   flex-direction: column;
 }
@@ -162,17 +161,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 48px 16px;
+  padding: 24px 16px;
 }
 
 .products-section .products-title a {
-  font-size: 24px;
+  font-size: 20px;
   color: #aaa;
   transition: all 0.2s;
 }
 
 .products-section .products-title a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .products-section .products {
@@ -193,13 +192,12 @@ nav {
 
 .products-section .products img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 3/2;
   object-fit: cover;
   transition: all 0.5s;
 }
 
 .products-section .products img:hover {
-  object-position: bottom;
   opacity: .6;
 }
 
@@ -211,26 +209,26 @@ nav {
 }
 
 .products-section .product-card .product-details p {
-  font-size: 24px;
+  font-size: 20px;
   color: #7a7a7a;
 }
 
 .insta-section {
   display: flex;
   flex-direction: row;
-  padding: 48px 120px;
+  padding: 24px 120px;
   justify-content: space-between;
 }
 
 .insta-details {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
   margin-right: 1em;
 }
 
 .insta-section .insta-details p {
-  font-size: 24px;
+  font-size: 20px;
   color: #aaaaaa;
 }
 
@@ -246,7 +244,7 @@ nav {
 }
 
 .insta-section .insta-details .insta-id p:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .insta-section .insta-details i {
@@ -262,11 +260,10 @@ nav {
 }
 
 .insta-section .insta-pics img {
-  width: 290px;
-  height: 300px;
+  width: 220px;
+  aspect-ratio: 1;
   object-fit: cover;
 }
-
 
 footer {
   display: flex;
@@ -284,7 +281,7 @@ footer .footer-left {
 
 footer .links a {
   color: #7a7a7a;
-  font-size: 20px;
+  font-size: 16px;
   text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
 }
 
@@ -294,7 +291,7 @@ footer .links li {
 }
 
 footer .links li:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 footer .footer-right {
@@ -307,26 +304,48 @@ footer .footer-right {
 footer .socials {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
+  margin-top: 1em;
 }
 
 footer .socials i {
-  font-size: 36px;
+  font-size: 24px;
   color: #aaaaaa;
   transition: all 0.2s;
 }
 
 footer .socials i:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 footer p {
   color: #7a7a7a;
-  font-size: 20px;
 }
 
 
-/* For tablets and smaller screens */
+@media (max-width: 1200px) {
+  .main-content-header {
+    width: 100%;
+  }
+
+  .products-section .products .product-card {
+    width: 46%;
+  }
+
+  footer .footer-left {
+    gap: 1em;
+  }
+
+  footer .links li {
+    padding: 1em 2em 1em 0;
+  }
+
+  footer .footer-right { 
+    width: 30%;
+  }
+}
+
+
 @media (max-width: 720px) {
   nav {
     padding: 24px 48px;
@@ -354,14 +373,9 @@ footer p {
     width: auto;
   }
 
-  .main-nav a {
-    font-size: 16px;
-  }
-
   .main-content {
     background-position: right;
     height: 70vh;
-    margin-top: -100px;
   }
 
   .main-content-header {
@@ -427,50 +441,11 @@ footer p {
   }
 
   footer {
-    padding: 48px;
-  }
-
-  footer .links a {
-    font-size: 16px;
-  }
-
-  footer .socials {
-    gap: 1em;
-  }
-
-  footer .footer-right {
-    gap: 1em;
-  }
-
-  footer .socials i {
-    font-size: 24px;
-    color: #aaaaaa;
-  }
-
-  footer p {
-    color: #7a7a7a;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .main-content-header {
-    width: 90%;
-  }
-
-  .products-section .products .product-card {
-    width: 100%;
-  }
-
-  .insta-section {
-    flex-direction: column;
-  }
-
-  footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: 2em;
+    padding: 48px;
   }
 
   footer .footer-left {
@@ -486,9 +461,19 @@ footer p {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    gap: 1em;
+  }
+
+  footer .socials i {
+    font-size: 24px;
+    color: #aaaaaa;
+  }
+
+  footer p {
+    color: #7a7a7a;
+    font-size: 16px;
   }
 }
-
 
 /* Menu */
 
@@ -505,7 +490,7 @@ footer p {
 .categories li {
   color: #f4f4f4;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
   padding: 24px 16px;
   min-width: 120px;
   text-align: center;
@@ -524,7 +509,7 @@ footer p {
 
 .path {
   text-align: center;
-  padding: 48px 16px;
+  padding: 32px 16px;
   color: #7a7a7a;
 }
 
@@ -547,7 +532,7 @@ footer p {
 }
 
 .sort p {
-  font-size: 20px;
+  font-size: 16px;
   color: #f4f4f4;
 }
 
@@ -566,12 +551,10 @@ footer p {
   background-color: #222;
   text-align: center;
   transition: all 0.5s;
-
 }
 
 .catalog .card:hover {
   transform: translateY(-10px);
-
 }
 
 .catalog .card img {
@@ -581,18 +564,17 @@ footer p {
 }
 
 .catalog .card .product-name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #f4f4f4;
   margin-top: 1em;
 }
 
 .catalog .card .price {
-  font-size: 20px;
+  font-size: 16px;
   color: #ddd;
   margin: .5em 0 1em;
 }
-
 
 @media (max-width: 1460px) {
   .catalog .card {
@@ -606,7 +588,6 @@ footer p {
   }
 
   .categories li {
-    font-size: 16px;
     padding: 16px 12px;
     min-width: 120px;
     text-align: center;
@@ -626,6 +607,11 @@ footer p {
 }
 
 @media (max-width: 720px) {
+  .categories li {
+    padding: 24px 8px;
+    min-width: fit-content;
+  }
+  
   .path {
     display: none;
   }
@@ -634,20 +620,8 @@ footer p {
     padding: 8px 48px;
   }
 
-  .sort p {
-    font-size: 16px;
-  }
-
   .catalog .card {
-    width: 48%;
-  }
-
-  .catalog .card .product-name {
-    font-size: 16px;
-  }
-
-  .catalog .card .price {
-    font-size: 16px;
+    width: 47%;
   }
 }
 
@@ -663,11 +637,11 @@ footer p {
   background-repeat: no-repeat;
   background-position: center;
   height: 80vh;
-  margin-top: -160px;
+  margin-top: -100px;
 }
 
 .about-header .header-content {
-  margin-top: 160px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -707,7 +681,7 @@ footer p {
 }
 
 .about-content .box p {
-  font-size: 20px;
+  font-size: 16px;
   color: #ddd;
   line-height: 1.5em;
   padding: .5em 0;
@@ -716,7 +690,7 @@ footer p {
 .about-content .story {
   background-color: #f4f4f4;
   margin: 48px;
-  padding: 60px 80px;
+  padding: 60px;
   color: #000;
 }
 
@@ -738,10 +712,10 @@ footer p {
 }
 
 .about-content .socials i:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .about-content {
     flex-direction: column;
   }
@@ -775,13 +749,9 @@ footer p {
     padding: 24px 0;
   }
 
-  .about-content .box p {
-    font-size: 16px;
-  }
-
   .about-content .story {
     margin: 16px;
-    padding: 48px 60px;
+    padding: 48px;
     color: #000;
   }
 }
@@ -809,14 +779,14 @@ footer p {
 }
 
 .product-section .product-details .price {
-  font-size: 24px;
+  font-size: 20px;
   color: #e4e4e4;
 }
 
 .product-section .quantity-cta {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   margin: 1em 0;
 }
 
@@ -834,14 +804,14 @@ footer p {
 }
 
 .product-section .quantity-cta button {
-  padding: 16px 32px;
+  padding: 16px 24px;
 }
 
 .product-section .details-tabs {
   display: flex;
   width: fit-content;
   align-items: flex-start;
-  gap: 2em;
+  gap: 1em;
   margin: 1em 0;
 }
 
@@ -849,7 +819,7 @@ footer p {
   padding: 8px 0;
   background-color: #0a0a0a;
   color: #ddd;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .product-section .details-tabs .current-tab {
@@ -858,7 +828,7 @@ footer p {
 }
 
 .product-section .details {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5em;
   color: #ddd;
   width: 500px;
@@ -882,7 +852,7 @@ footer p {
 .see-more-btn {
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   margin: 1em;
 }
@@ -911,7 +881,7 @@ footer p {
   }
 
   .suggested .card {
-    min-width: 44%;
+    min-width: 33%;
   }
 
   .similar-products-title {
@@ -949,31 +919,17 @@ footer p {
     padding: 24px 0;
   }
 
-  .product-section .product-details .price {
-    font-size: 20px;
-  }
-
   .product-section .quantity-cta select,
   button {
     padding: 12px 16px;
   }
 
   .product-section .quantity-cta {
-    gap: 1em;
     margin: 0.5em 0;
   }
 
   .product-section .details-tabs {
-    gap: 1em;
     margin: 0.5em 0;
-  }
-
-  .product-section .details-tabs .tab {
-    font-size: 16px;
-  }
-
-  .product-section .details {
-    font-size: 16px;
   }
 
   .suggested .card {
@@ -993,12 +949,12 @@ footer p {
 /* Checkout */
 
 .checkout-title {
-  padding: 48px;
+  padding: 24px;
   text-align: center;
 }
 
 .checkout {
-  padding: 48px 120px;
+  padding: 24px 120px;
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -1025,7 +981,7 @@ footer p {
 .form-group label {
   display: block;
   margin: 0 0.5em 0.5em 0;
-  font-size: 20px;
+  font-size: 16px;
   color: #f4f4f4;
 }
 
@@ -1059,7 +1015,8 @@ textarea {
   background: #2d2d2d;
   color: #ddd;
   height: fit-content;
-  font-size: 20px;
+  font-size: 16px;
+  width: 30%;
 }
 
 .order-summary h3 {
@@ -1086,7 +1043,16 @@ textarea {
 
 .order-summary .order-note {
   color: #aaaaaa;
-  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .checkout {
+    width: 100%;
+  }
+
+  #checkout-form, .order-summary {
+    width: 40%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1097,20 +1063,13 @@ textarea {
     align-items: center;
   }
 
-  #checkout-form {
-    width: 80%;
-  }
-
+  #checkout-form,
   .order-summary {
     width: 80%;
   }
 }
 
 @media (max-width: 720px) {
-  .checkout-title {
-    padding: 24px;
-  }
-
   .checkout {
     padding: 24px 48px;
   }
@@ -1122,11 +1081,6 @@ textarea {
 
   .form-group {
     margin-bottom: 1.5em;
-  }
-
-  .form-group label,
-  .order-summary {
-    font-size: 16px;
   }
 
   #card-details {
