@@ -340,7 +340,7 @@ footer p {
     padding: 1em 2em 1em 0;
   }
 
-  footer .footer-right { 
+  footer .footer-right {
     width: 30%;
   }
 }
@@ -348,38 +348,49 @@ footer p {
 
 @media (max-width: 720px) {
   nav {
-    padding: 24px 48px;
+    padding: 24px 12px;
   }
 
   h1 {
-    font-size: 48px;
-  }
-
-  h2 {
     font-size: 36px;
   }
 
-  h3 {
+  h2 {
     font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
   button,
   select {
+    font-size: 14px;
     padding: 8px 12px;
   }
 
   .logo {
-    height: 48px;
+    height: 32px;
     width: auto;
+  }
+
+  .main-nav {
+    gap: 1em;
+  }
+
+  .main-nav a {
+    font-size: 14px;
   }
 
   .main-content {
     background-position: right;
-    height: 70vh;
+    height: 80vh;
+    margin-top: -80px;
+
   }
 
   .main-content-header {
-    padding: 24px 48px;
+    padding: 24px 12px;
     width: 100%;
     gap: 1em
   }
@@ -390,11 +401,15 @@ footer p {
   }
 
   .products-section {
-    padding: 24px 48px;
+    padding: 24px 12px;
   }
 
   .products-section h2 {
-    padding: 48px 0;
+    padding: 24px 0;
+  }
+
+  .products-section .products-title a {
+    font-size: 16px;
   }
 
   .products-section .products {
@@ -415,7 +430,7 @@ footer p {
 
   .insta-section {
     flex-direction: column;
-    padding: 24px 48px;
+    padding: 24px 12px;
   }
 
   .insta-details {
@@ -432,7 +447,7 @@ footer p {
   }
 
   .insta-section .insta-pics {
-    gap: 1em;
+    gap: 0.5em;
   }
 
   .insta-section .insta-pics img {
@@ -445,7 +460,7 @@ footer p {
     justify-content: center;
     align-items: center;
     gap: 2em;
-    padding: 48px;
+    padding: 24px;
   }
 
   footer .footer-left {
@@ -609,19 +624,31 @@ footer p {
 @media (max-width: 720px) {
   .categories li {
     padding: 24px 8px;
+    font-size: 12px;
     min-width: fit-content;
   }
-  
+
   .path {
     display: none;
   }
 
   .sort {
-    padding: 8px 48px;
+    padding: 8px 20px;
+  }
+
+  .catalog {
+    padding: 16px 12px;
+    gap: 0.5em
   }
 
   .catalog .card {
-    width: 47%;
+    width: 48%;
+    padding: 0.5em;
+  }
+
+  .catalog .card .product-name {
+    font-size: 14px;
+    margin-top: 0.5em;
   }
 }
 
@@ -729,7 +756,7 @@ footer p {
 @media (max-width: 720px) {
   .about-header {
     height: 50vh;
-    margin-top: -100px;
+    margin-top: -80px;
   }
 
   .about-header .header-content {
@@ -737,8 +764,8 @@ footer p {
   }
 
   .about-content {
-    padding: 16px 48px;
-    gap: 2em;
+    padding: 16px 12px;
+    gap: 1em;
   }
 
   .about-content .left-col {
@@ -746,12 +773,12 @@ footer p {
   }
 
   .about-content .box {
-    padding: 24px 0;
+    padding: 12px 0;
   }
 
   .about-content .story {
     margin: 16px;
-    padding: 48px;
+    padding: 24px;
     color: #000;
   }
 }
@@ -908,7 +935,7 @@ footer p {
 
 @media (max-width: 720px) {
   .product-section {
-    padding: 48px;
+    padding: 24px 12px;
   }
 
   .product-section .product-img {
@@ -916,7 +943,7 @@ footer p {
   }
 
   .product-section .product-details {
-    padding: 24px 0;
+    padding: 12px 0;
   }
 
   .product-section .quantity-cta select,
@@ -1050,7 +1077,8 @@ textarea {
     width: 100%;
   }
 
-  #checkout-form, .order-summary {
+  #checkout-form,
+  .order-summary {
     width: 40%;
   }
 }
@@ -1071,12 +1099,13 @@ textarea {
 
 @media (max-width: 720px) {
   .checkout {
-    padding: 24px 48px;
+    padding: 24px 12px;
   }
 
   #checkout-form,
   .order-summary {
     width: 100%;
+    padding: 1em;
   }
 
   .form-group {
